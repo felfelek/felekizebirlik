@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "307314910344",
+    "firebase_url": "https://lecbox.firebaseio.com",
+    "project_id": "lecbox",
+    "storage_bucket": "lecbox.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:307314910344:android:269e11cf495683c1",
+        "android_client_info": {
+          "package_name": "com.lecboxyazilim.lecbox"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "307314910344-opjdjmi04f1mhpfq2ke7etp2lk1pk5k8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.lecboxyazilim.lecbox",
+            "certificate_hash": "46e5989c0d97c35cd0274ad3076ee8b937a74ac0"
+          }
+        },
+        {
+          "client_id": "307314910344-u5qad6hol6upe19hq27r1gsksq1fccmi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVJpvu6Q1UfnsCJKFlmVfgXo3plw-ln9A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "307314910344-u5qad6hol6upe19hq27r1gsksq1fccmi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
