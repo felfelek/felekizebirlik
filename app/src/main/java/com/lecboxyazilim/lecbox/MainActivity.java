@@ -1,5 +1,6 @@
 package com.lecboxyazilim.lecbox;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -14,8 +15,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+    FirebaseAuth controlUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +42,11 @@ public class MainActivity extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
+        controlUser = FirebaseAuth.getInstance();
+        if(controlUser.getCurrentUser()==null){
+            Intent signInControlIntent = new Intent(getApplicationContext(),SignInActivity.class);
+            startActivity(signInControlIntent);
+        }
         //deneme
     }
 
@@ -66,8 +75,11 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        if (id == R.id.logout) {
+            controlUser.signOut();
+            Intent logoutIntent = new Intent(MainActivity.this,SignInActivity.class);
+            startActivity(logoutIntent);
+
         }
 
         return super.onOptionsItemSelected(item);
