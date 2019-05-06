@@ -19,35 +19,35 @@ import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.FirebaseAuthInvalidUserException;
 
 public class SignInActivity extends AppCompatActivity {
-    Button denemeButton;
-    EditText denemeTextEmail;
-    EditText denemeTextPass;
+    Button signInButton;
+    EditText sEmailEditText;
+    EditText sPassEditText;
     FirebaseAuth signInAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
-        denemeButton = findViewById(R.id.denemeButton);
-        denemeTextEmail = findViewById(R.id.denemeTextEmail);
-        denemeTextPass = findViewById(R.id.denemeTextPass);
+        signInButton = findViewById(R.id.signInButton);
+        sEmailEditText = findViewById(R.id.sEmailEditText);
+        sPassEditText = findViewById(R.id.sPassEditText);
         signInAuth = FirebaseAuth.getInstance();
 
-       denemeButton.setOnClickListener(new View.OnClickListener() {
+       signInButton.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
-               if(denemeTextEmail.getText().toString().isEmpty()){
+               if(sEmailEditText.getText().toString().isEmpty()){
 
-                   denemeTextEmail.setError("Lütfen doldurunuz.");
-                   denemeTextEmail.requestFocus();
+                   sEmailEditText.setError("Lütfen doldurunuz.");
+                   sEmailEditText.requestFocus();
 
-               }if(denemeTextPass.getText().toString().isEmpty()){
-                   denemeTextPass.setError("Lütfen doldurunuz.");
-                   denemeTextPass.requestFocus();
+               }if(sPassEditText.getText().toString().isEmpty()){
+                   sPassEditText.setError("Lütfen doldurunuz.");
+                   sPassEditText.requestFocus();
                }
 
-               if(!denemeTextEmail.getText().toString().isEmpty()&& !denemeTextPass.getText().toString().isEmpty()){
-                   signInAuth.signInWithEmailAndPassword(denemeTextEmail.getText().toString(),denemeTextPass.getText().toString()).addOnCompleteListener(SignInActivity.this, new OnCompleteListener<AuthResult>() {
+               if(!sEmailEditText.getText().toString().isEmpty()&& !sPassEditText.getText().toString().isEmpty()){
+                   signInAuth.signInWithEmailAndPassword(sEmailEditText.getText().toString(),sPassEditText.getText().toString()).addOnCompleteListener(SignInActivity.this, new OnCompleteListener<AuthResult>() {
                        @Override
                        public void onComplete(@NonNull Task<AuthResult> task) {
                            Intent signInSuccesIntent = new Intent(SignInActivity.this,MainActivity.class);
@@ -62,7 +62,7 @@ public class SignInActivity extends AppCompatActivity {
                                Toast.makeText(SignInActivity.this, "Mail adresi veya şifre hatalı.", Toast.LENGTH_LONG).show();
 
                            }
-                           Toast.makeText(SignInActivity.this, ""+e, Toast.LENGTH_LONG).show();
+
                        }
                    });
 
