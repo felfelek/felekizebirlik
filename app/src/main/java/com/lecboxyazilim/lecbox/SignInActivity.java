@@ -33,43 +33,44 @@ public class SignInActivity extends AppCompatActivity {
         sPassEditText = findViewById(R.id.sPassEditText);
         signInAuth = FirebaseAuth.getInstance();
 
-       signInButton.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View v) {
-               if(sEmailEditText.getText().toString().isEmpty()){
+        signInButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (sEmailEditText.getText().toString().isEmpty()) {
 
-                   sEmailEditText.setError("Lütfen doldurunuz.");
-                   sEmailEditText.requestFocus();
+                    sEmailEditText.setError("Lütfen doldurunuz.");
+                    sEmailEditText.requestFocus();
 
-               }if(sPassEditText.getText().toString().isEmpty()){
-                   sPassEditText.setError("Lütfen doldurunuz.");
-                   sPassEditText.requestFocus();
-               }
+                }
+                if (sPassEditText.getText().toString().isEmpty()) {
+                    sPassEditText.setError("Lütfen doldurunuz.");
+                    sPassEditText.requestFocus();
+                }
 
-               if(!sEmailEditText.getText().toString().isEmpty()&& !sPassEditText.getText().toString().isEmpty()){
-                   signInAuth.signInWithEmailAndPassword(sEmailEditText.getText().toString(),sPassEditText.getText().toString()).addOnCompleteListener(SignInActivity.this, new OnCompleteListener<AuthResult>() {
-                       @Override
-                       public void onComplete(@NonNull Task<AuthResult> task) {
-                           Intent signInSuccesIntent = new Intent(SignInActivity.this,MainActivity.class);
-                           startActivity(signInSuccesIntent);
-                       }
-                   }).addOnFailureListener(new OnFailureListener() {
-                       @Override
-                       public void onFailure(@NonNull Exception e) {
+                if (!sEmailEditText.getText().toString().isEmpty() && !sPassEditText.getText().toString().isEmpty()) {
+                    signInAuth.signInWithEmailAndPassword(sEmailEditText.getText().toString(), sPassEditText.getText().toString()).addOnCompleteListener(SignInActivity.this, new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            Intent signInSuccesIntent = new Intent(SignInActivity.this, MainActivity.class);
+                            startActivity(signInSuccesIntent);
+                        }
+                    }).addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
 
-                           if(e instanceof FirebaseAuthInvalidCredentialsException){
+                            if (e instanceof FirebaseAuthInvalidCredentialsException) {
 
-                               Toast.makeText(SignInActivity.this, "Mail adresi veya şifre hatalı.", Toast.LENGTH_LONG).show();
+                                Toast.makeText(SignInActivity.this, "Mail adresi veya şifre hatalı.", Toast.LENGTH_LONG).show();
 
-                           }
+                            }
 
-                       }
-                   });
+                        }
+                    });
 
 
-               }
-           }
-       });
+                }
+            }
+        });
     }
 
 }
