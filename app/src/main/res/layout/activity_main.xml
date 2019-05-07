@@ -20,7 +20,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.255"
-        app:srcCompat="@drawable/Path107" />
+        app:srcCompat="@drawable/path107" />
     <ImageView
         android:id="@+id/imageView6"
         android:layout_width="wrap_content"
@@ -35,7 +35,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/Path110" />
+        app:srcCompat="@drawable/path110" />
 
     <ImageView
         android:id="@+id/imageView7"
@@ -51,7 +51,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/Path106" />
+        app:srcCompat="@drawable/path106" />
 
     <ImageView
         android:id="@+id/imageView8"
@@ -67,7 +67,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.603"
-        app:srcCompat="@drawable/Path109" />
+        app:srcCompat="@drawable/path109" />
 
     <ImageView
         android:id="@+id/imageView9"
@@ -83,7 +83,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.601"
-        app:srcCompat="@drawable/Path108" />
+        app:srcCompat="@drawable/path108" />
 
     <ImageView
         android:id="@+id/imageView10"
@@ -99,5 +99,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.457"
-        app:srcCompat="@drawable/Path105" />
+        app:srcCompat="@drawable/path105" />
 </android.support.constraint.ConstraintLayout>
