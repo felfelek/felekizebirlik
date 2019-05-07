@@ -51,8 +51,10 @@ public class SignInActivity extends AppCompatActivity {
                     signInAuth.signInWithEmailAndPassword(sEmailEditText.getText().toString(), sPassEditText.getText().toString()).addOnCompleteListener(SignInActivity.this, new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
-                            Intent signInSuccesIntent = new Intent(SignInActivity.this, MainActivity.class);
-                            startActivity(signInSuccesIntent);
+                            if(task.isComplete()){
+                                Intent signInSuccesIntent = new Intent(SignInActivity.this, MainActivity.class);
+                                startActivity(signInSuccesIntent);
+                            }
                         }
                     }).addOnFailureListener(new OnFailureListener() {
                         @Override
