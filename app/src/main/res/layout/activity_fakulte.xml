@@ -28,42 +28,47 @@
         android:layout_height="45dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="308dp"
-        android:text="Button"
+        android:gravity="left"
+        android:paddingLeft="25dp"
+        android:text="İktisadi ve İdari Bilimler Fakültesi"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.647"
-        />
+        app:layout_constraintVertical_bias="0.647" />
+
     <Button
         android:id="@+id/muhendislik"
         android:layout_width="340dp"
         android:layout_height="45dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
-        android:text="Button"
+        android:gravity="left"
+        android:paddingLeft="25dp"
+        android:text="Mühendislik Fakültesi"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.399"
-        />
+        app:layout_constraintVertical_bias="0.399" />
+
     <Button
         android:id="@+id/fenedeb"
         android:layout_width="340dp"
         android:layout_height="45dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
-        android:text="Button"
+        android:gravity="left"
+        android:paddingLeft="25dp"
+        android:text="Fen-Edebiyat Fakültesi"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.473"
-        />
+        app:layout_constraintVertical_bias="0.473" />
 
     <Button
         android:id="@+id/isletme"
@@ -71,18 +76,34 @@
         android:layout_height="45dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
-        android:text="Button"
+        android:gravity="left"
+        android:paddingLeft="25dp"
+        android:text="İşletme Fakültesi"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.546"
-        />
+        app:layout_constraintVertical_bias="0.546" />
 
-
-
-
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="164dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Fakültenizi seçiniz"
+        android:textColor="@color/colorBlack"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.218" />
 
 
 </android.support.constraint.ConstraintLayout>

@@ -39,7 +39,9 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
-                android:text="Button" />
+                android:gravity="left"
+                android:paddingLeft="25dp"
+                android:text="Fizik" />
 
             <Button
                 android:id="@+id/kimya"
@@ -49,7 +51,9 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
-                android:text="Button" />
+                android:gravity="left"
+                android:paddingLeft="25dp"
+                android:text="Kimya" />
 
             <Button
                 android:id="@+id/biyoloji"
@@ -59,7 +63,9 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
-                android:text="Button" />
+                android:gravity="left"
+                android:paddingLeft="25dp"
+                android:text="Biyoloji" />
 
             <Button
                 android:id="@+id/matematik"
@@ -69,7 +75,9 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
-                android:text="Button" />
+                android:gravity="left"
+                android:paddingLeft="25dp"
+                android:text="Matematik" />
 
             <Button
                 android:id="@+id/tarih"
@@ -79,7 +87,9 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
-                android:text="Button" />
+                android:gravity="left"
+                android:paddingLeft="25dp"
+                android:text="Tarih" />
 
             <Button
                 android:id="@+id/turkDili"
@@ -89,7 +99,9 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
-                android:text="Button" />
+                android:gravity="left"
+                android:paddingLeft="25dp"
+                android:text="Türk Dili ve Edebiyatı" />
 
             <Button
                 android:id="@+id/ingilizDili"
@@ -99,7 +111,9 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
-                android:text="Button" />
+                android:gravity="left"
+                android:paddingLeft="25dp"
+                android:text="İngiliz Dili ve Edebiyatı" />
 
             <Button
                 android:id="@+id/arkeoloji"
@@ -109,7 +123,9 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
-                android:text="Button" />
+                android:gravity="left"
+                android:paddingLeft="25dp"
+                android:text="Arkeoloji" />
 
             <Button
                 android:id="@+id/sanat"
@@ -119,7 +135,9 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
-                android:text="Button" />
+                android:gravity="left"
+                android:paddingLeft="25dp"
+                android:text="Sanat Tarihi" />
 
             <Button
                 android:id="@+id/cografya"
@@ -129,7 +147,9 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
-                android:text="Button" />
+                android:gravity="left"
+                android:paddingLeft="25dp"
+                android:text="Coğrafya" />
 
             <Button
                 android:id="@+id/psikoloji"
@@ -139,7 +159,9 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
-                android:text="Button" />
+                android:gravity="left"
+                android:paddingLeft="25dp"
+                android:text="Psikoloji" />
 
             <Button
                 android:id="@+id/felsefe"
@@ -149,7 +171,9 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
-                android:text="Button" />
+                android:gravity="left"
+                android:paddingLeft="25dp"
+                android:text="Felsefe" />
 
             <Button
                 android:id="@+id/sosyoloji"
@@ -159,7 +183,9 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
-                android:text="Button" />
+                android:gravity="left"
+                android:paddingLeft="25dp"
+                android:text="Sosyoloji" />
 
             <Button
                 android:id="@+id/mutercim"
@@ -169,7 +195,9 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
-                android:text="Button" />
+                android:gravity="left"
+                android:paddingLeft="25dp"
+                android:text="Mütercim Tercümanlık" />
         </LinearLayout>
     </ScrollView>
 

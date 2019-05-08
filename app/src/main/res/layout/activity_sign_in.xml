@@ -15,6 +15,9 @@
         android:layout_marginBottom="8dp"
         android:background="@drawable/username"
         android:ems="10"
+        android:hint="Kullanıcı Adı"
+        android:textColorHint="@color/colorGrey"
+        android:paddingLeft="45dp"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -30,6 +33,9 @@
         android:layout_marginBottom="8dp"
         android:background="@drawable/password"
         android:ems="10"
+        android:hint="Parola"
+        android:paddingLeft="45dp"
+        android:textColorHint="@color/colorGrey"
         android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -52,4 +58,21 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.605"
         app:srcCompat="@drawable/rectangle196" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Giriş Yap"
+        android:textColor="@color/colorBlack"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.592" />
 </android.support.constraint.ConstraintLayout>
