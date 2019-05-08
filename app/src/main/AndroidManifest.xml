@@ -9,17 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <activity android:name=".FenEdebiyatActivity"></activity>
+        <activity android:name=".FenEdebiyatActivity" />
         <activity android:name=".IsletmeActivity" />
         <activity android:name=".IktisatFakultesiActivity" />
         <activity android:name=".MuhendislikFakultesiActivity" />
         <activity android:name=".FakulteActivity" />
-        <activity android:name=".TeacherFinder"></activity>
-
+        <activity android:name=".TeacherFinder" />
         <activity android:name=".SignInActivity" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Main2Activity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>

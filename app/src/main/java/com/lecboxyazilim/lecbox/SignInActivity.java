@@ -52,7 +52,7 @@ public class SignInActivity extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if(task.isComplete()){
-                                Intent signInSuccesIntent = new Intent(SignInActivity.this, MainActivity.class);
+                                Intent signInSuccesIntent = new Intent(SignInActivity.this, Main2Activity.class);
                                 startActivity(signInSuccesIntent);
                             }
                         }
