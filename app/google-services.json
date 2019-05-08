@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "307314910344-01n1latdsgk1vi1ioitt1tka0861ugfn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.lecboxyazilim.lecbox",
+            "certificate_hash": "bfbe265ad311ff4918610518fd32bb32586d4a30"
+          }
+        },
+        {
           "client_id": "307314910344-opjdjmi04f1mhpfq2ke7etp2lk1pk5k8.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
