@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login"
+    tools:context=".FenEdebiyatActivity"
+    tools:layout_editor_absoluteY="25dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="649dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/fenEdebiyatBolumler"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:src="@drawable/group6" />
+
+            <Button
+                android:id="@+id/fizik"
+                android:layout_width="340dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:gravity="left"
+                android:paddingLeft="25dp"
+                android:text="Fizik" />
+
+            <Button
+                android:id="@+id/kimya"
+                android:layout_width="340dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:gravity="left"
+                android:paddingLeft="25dp"
+                android:text="Kimya" />
+
+            <Button
+                android:id="@+id/biyoloji"
+                android:layout_width="340dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:gravity="left"
+                android:paddingLeft="25dp"
+                android:text="Biyoloji" />
+
+            <Button
+                android:id="@+id/matematik"
+                android:layout_width="340dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:gravity="left"
+                android:paddingLeft="25dp"
+                android:text="Matematik" />
+
+            <Button
+                android:id="@+id/tarih"
+                android:layout_width="340dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:gravity="left"
+                android:paddingLeft="25dp"
+                android:text="Tarih" />
+
+            <Button
+                android:id="@+id/turkDili"
+                android:layout_width="340dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:gravity="left"
+                android:paddingLeft="25dp"
+                android:text="Türk Dili ve Edebiyatı" />
+
+            <Button
+                android:id="@+id/ingilizDili"
+                android:layout_width="340dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:gravity="left"
+                android:paddingLeft="25dp"
+                android:text="İngiliz Dili ve Edebiyatı" />
+
+            <Button
+                android:id="@+id/arkeoloji"
+                android:layout_width="340dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:gravity="left"
+                android:paddingLeft="25dp"
+                android:text="Arkeoloji" />
+
+            <Button
+                android:id="@+id/sanat"
+                android:layout_width="340dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:gravity="left"
+                android:paddingLeft="25dp"
+                android:text="Sanat Tarihi" />
+
+            <Button
+                android:id="@+id/cografya"
+                android:layout_width="340dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:gravity="left"
+                android:paddingLeft="25dp"
+                android:text="Coğrafya" />
+
+            <Button
+                android:id="@+id/psikoloji"
+                android:layout_width="340dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:gravity="left"
+                android:paddingLeft="25dp"
+                android:text="Psikoloji" />
+
+            <Button
+                android:id="@+id/felsefe"
+                android:layout_width="340dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:gravity="left"
+                android:paddingLeft="25dp"
+                android:text="Felsefe" />
+
+            <Button
+                android:id="@+id/sosyoloji"
+                android:layout_width="340dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:gravity="left"
+                android:paddingLeft="25dp"
+                android:text="Sosyoloji" />
+
+            <Button
+                android:id="@+id/mutercim"
+                android:layout_width="340dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:gravity="left"
+                android:paddingLeft="25dp"
+                android:text="Mütercim Tercümanlık" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>
