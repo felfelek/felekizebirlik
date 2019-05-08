@@ -4,11 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/login"
-    tools:context=".IktisatFakultesiActivity">
-
+    tools:context=".MuhendislikHocalarActivity"
+    android:background="@drawable/login">
     <ImageView
-        android:id="@+id/iktisatBolumler"
+        android:id="@+id/muhendislikHoca"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -23,34 +22,36 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.173" />
 
+
+
     <Button
-        android:id="@+id/isletme"
+        android:id="@+id/tugba"
         android:layout_width="340dp"
         android:layout_height="45dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:text="İşletme"
+        android:text="Doç. Dr. Tuğba Özacar Öztürk"
         android:gravity="left"
         android:paddingLeft="25dp"
+        android:background="@drawable/button_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        android:background="@drawable/button_background"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.27" />
 
     <Button
-        android:id="@+id/iktisat"
+        android:id="@+id/cinsdikici"
         android:layout_width="340dp"
         android:layout_height="45dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:text="İktisat"
+        android:text="Doç. Dr. Muhammed Gökhan Cinsdikici"
         android:background="@drawable/button_background"
         android:gravity="left"
         android:paddingLeft="25dp"
@@ -62,16 +63,16 @@
         app:layout_constraintVertical_bias="0.346" />
 
     <Button
-        android:id="@+id/maliye"
+        android:id="@+id/ovunc"
         android:layout_width="340dp"
         android:layout_height="45dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="Maliye"
-        android:gravity="left"
         android:background="@drawable/button_background"
+        android:layout_marginBottom="8dp"
+        android:text="Dr. Öğr. Üyesi Övünç Öztürk"
+        android:gravity="left"
         android:paddingLeft="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -81,15 +82,15 @@
         app:layout_constraintVertical_bias="0.423" />
 
     <Button
-        android:id="@+id/kamu"
+        android:id="@+id/didem"
         android:layout_width="340dp"
         android:layout_height="45dp"
         android:layout_marginStart="8dp"
+        android:background="@drawable/button_background"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:background="@drawable/button_background"
         android:layout_marginBottom="8dp"
-        android:text="Kamu Yönetimi"
+        android:text="Dr. Öğr. Üyesi Didem Abidin"
         android:gravity="left"
         android:paddingLeft="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -99,15 +100,15 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/siyasal"
+        android:id="@+id/birim"
         android:layout_width="340dp"
         android:layout_height="45dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:background="@drawable/button_background"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:text="Siyaset Bilimi ve Uluslararası İlişkiler "
+        android:background="@drawable/button_background"
+        android:text="Dr. Öğr. Üyesi Birim Balcı"
         android:gravity="left"
         android:paddingLeft="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -118,15 +119,15 @@
         app:layout_constraintVertical_bias="0.575" />
 
     <Button
-        android:id="@+id/calisma"
+        android:id="@+id/zeynep"
         android:layout_width="340dp"
         android:layout_height="45dp"
         android:layout_marginStart="8dp"
-        android:background="@drawable/button_background"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:background="@drawable/button_background"
         android:layout_marginBottom="8dp"
-        android:text="Çalışma Ekonomisi ve Endüstri İlişkileri"
+        android:text="Dr. Öğr. Üyesi Zeynep Çipiloğlu Yıldız"
         android:gravity="left"
         android:paddingLeft="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -137,14 +138,14 @@
         app:layout_constraintVertical_bias="0.648" />
 
     <Button
-        android:id="@+id/ekonometri"
+        android:id="@+id/hakan"
         android:layout_width="340dp"
         android:layout_height="45dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:text="Ekonometri"
+        android:text="Dr. Öğr. Üyesi Hakan Murat Karaca"
         android:background="@drawable/button_background"
         android:gravity="left"
         android:paddingLeft="25dp"
@@ -156,7 +157,7 @@
         app:layout_constraintVertical_bias="0.718" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/muhHoca"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -164,7 +165,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:fontFamily="sans-serif-medium"
-        android:text="Bölümünüzü seçiniz"
+        android:text="Öğretim üyesini seçiniz"
         android:textColor="@color/colorBlack"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -177,4 +178,3 @@
 
 
 </android.support.constraint.ConstraintLayout>
-

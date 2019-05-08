@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".MuhendislikHocalarActivity"></activity>
         <activity android:name=".FenEdebiyatActivity" />
         <activity android:name=".IsletmeActivity" />
         <activity android:name=".IktisatFakultesiActivity" />
