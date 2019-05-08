@@ -3,14 +3,17 @@ package com.lecboxyazilim.lecbox;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.DocumentChange;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
@@ -21,13 +24,17 @@ import com.google.firebase.firestore.QuerySnapshot;
 
 import org.json.JSONStringer;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import javax.annotation.Nullable;
 
 public class TeacherFinder extends AppCompatActivity {
     private RecyclerView mHocaList;
+    private List<Teachers> teachersList;
+    private TeachersListAdapter teachersListAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,12 +42,19 @@ public class TeacherFinder extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_teacher_finder);
         mHocaList = (RecyclerView) findViewById(R.id.hocaRecyclerView);
+        teachersList = new ArrayList<>();
+        teachersListAdapter = new TeachersListAdapter(teachersList);
+        mHocaList.setHasFixedSize(true);
+        mHocaList.setLayoutManager(new LinearLayoutManager(this));
+        mHocaList.setAdapter(teachersListAdapter);
+
         //Şimdilik seçme işlemini yapmış gibi davranıyorum(bilgisyar)
         String choiceBolum = "bilgisayarmuhendislik";
         String choiceFakulte="muhendislikfakultesi";
         //456
         final Map<String, Object> hocaMap = new HashMap<>();
         final String[] hocaNameArray={};
+
         //Fakülteler/muhendislikfakultesi/bölümler/bilgisayarmuhendislik/hocalar
         if(choiceFakulte.equals("muhendislikfakultesi")){
             if(choiceBolum.equals("bilgisayarmuhendislik")){
@@ -63,9 +77,14 @@ public class TeacherFinder extends AppCompatActivity {
                 db.collection("bilmuh").addSnapshotListener(new EventListener<QuerySnapshot>() {
                     @Override
                     public void onEvent(@Nullable QuerySnapshot queryDocumentSnapshots, @Nullable FirebaseFirestoreException e) {
-                        for(DocumentSnapshot doc : queryDocumentSnapshots){
-                            String user_name = doc.getString("name");
-                            Log.d("HEY","name:"+ user_name);
+                        for(DocumentChange doc : queryDocumentSnapshots.getDocumentChanges()){
+                            if(doc.getType() == DocumentChange.Type.ADDED){
+                                //String name = doc.getDocument().getString("name");
+                                //Log.d("TAG", "name"+ name);
+                                Teachers teachers = doc.getDocument().toObject(Teachers.class);
+                                teachersList.add(teachers);
+                                teachersListAdapter.notifyDataSetChanged();
+                            }
                         }
 
                     }
@@ -75,5 +94,11 @@ public class TeacherFinder extends AppCompatActivity {
             }
 
         }
+        mHocaList.addOnItemTouchListener(new RecyclerItemClickListener(TeacherFinder.this, new RecyclerItemClickListener.OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, int position) {
+                Toast.makeText(TeacherFinder.this, "HEY", Toast.LENGTH_SHORT).show();
+            }
+        }));
     }
 }
