@@ -31,6 +31,7 @@ public class TeacherFinder extends AppCompatActivity {
         //Şimdilik seçme işlemini yapmış gibi davranıyorum(bilgisyar)
         String choiceBolum = "bilgisayarmuhendislik";
         String choiceFakulte="muhendislikfakultesi";
+        //456
         final Map<String, Object> hocaMap = new HashMap<>();
         final String[] hocaNameArray={};
         //Fakülteler/muhendislikfakultesi/bölümler/bilgisayarmuhendislik/hocalar
