@@ -3,6 +3,7 @@ package com.lecboxyazilim.lecbox;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.Toast;
@@ -12,7 +13,9 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
@@ -21,13 +24,17 @@ import org.json.JSONStringer;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.annotation.Nullable;
+
 public class TeacherFinder extends AppCompatActivity {
+    private RecyclerView mHocaList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_teacher_finder);
+        mHocaList = (RecyclerView) findViewById(R.id.hocaRecyclerView);
         //Şimdilik seçme işlemini yapmış gibi davranıyorum(bilgisyar)
         String choiceBolum = "bilgisayarmuhendislik";
         String choiceFakulte="muhendislikfakultesi";
@@ -37,7 +44,7 @@ public class TeacherFinder extends AppCompatActivity {
         //Fakülteler/muhendislikfakultesi/bölümler/bilgisayarmuhendislik/hocalar
         if(choiceFakulte.equals("muhendislikfakultesi")){
             if(choiceBolum.equals("bilgisayarmuhendislik")){
-                db.collection("bilmuh").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                /*db.collection("bilmuh").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
                         if(task.isSuccessful()){
@@ -46,9 +53,21 @@ public class TeacherFinder extends AppCompatActivity {
                             for (QueryDocumentSnapshot document : task.getResult()){
                                 hocaMap.put("name",document.getData().toString());
                                 Log.d("cikti", document.getId() + " => " + document.getData());
+
                             }
 
                         }
+                    }
+                });*/
+
+                db.collection("bilmuh").addSnapshotListener(new EventListener<QuerySnapshot>() {
+                    @Override
+                    public void onEvent(@Nullable QuerySnapshot queryDocumentSnapshots, @Nullable FirebaseFirestoreException e) {
+                        for(DocumentSnapshot doc : queryDocumentSnapshots){
+                            String user_name = doc.getString("name");
+                            Log.d("HEY","name:"+ user_name);
+                        }
+
                     }
                 });
 
