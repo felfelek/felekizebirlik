@@ -9,6 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <activity android:name=".RandevuActivity"></activity>
         <activity android:name=".Transportation2Activity"></activity>
         <activity android:name=".TransportationActivity" />
         <activity android:name=".MuhendislikHocalarActivity" />
