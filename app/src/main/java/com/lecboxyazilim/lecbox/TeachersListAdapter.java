@@ -28,6 +28,7 @@ public class TeachersListAdapter extends RecyclerView.Adapter<TeachersListAdapte
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
         viewHolder.nameText.setText(teachersList.get(i).getName());
         viewHolder.statusText.setText(teachersList.get(i).getStatus());
+
     }
 
     @Override

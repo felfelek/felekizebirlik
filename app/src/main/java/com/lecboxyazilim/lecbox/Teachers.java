@@ -1,7 +1,8 @@
 package com.lecboxyazilim.lecbox;
 
-public class Teachers {
+public class Teachers  {
     private String name;
+    private String status;
     public Teachers(){
 
     }
@@ -11,7 +12,7 @@ public class Teachers {
         this.status = status;
     }
 
-    private String status;
+
 
     public String getName() {
         return name;

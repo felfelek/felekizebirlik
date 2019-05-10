@@ -8,6 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -35,6 +36,8 @@ public class TeacherFinder extends AppCompatActivity {
     private RecyclerView mHocaList;
     private List<Teachers> teachersList;
     private TeachersListAdapter teachersListAdapter;
+    private List<String> teacherIds;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +45,10 @@ public class TeacherFinder extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_teacher_finder);
         mHocaList = (RecyclerView) findViewById(R.id.hocaRecyclerView);
+        //2de değiştirdim
         teachersList = new ArrayList<>();
+        teacherIds = new ArrayList<>();
+
         teachersListAdapter = new TeachersListAdapter(teachersList);
         mHocaList.setHasFixedSize(true);
         mHocaList.setLayoutManager(new LinearLayoutManager(this));
@@ -74,7 +80,7 @@ public class TeacherFinder extends AppCompatActivity {
                     }
                 });*/
 
-                db.collection("bilmuh").addSnapshotListener(new EventListener<QuerySnapshot>() {
+                /*db.collection("bilmuh").addSnapshotListener(new EventListener<QuerySnapshot>() {
                     @Override
                     public void onEvent(@Nullable QuerySnapshot queryDocumentSnapshots, @Nullable FirebaseFirestoreException e) {
                         for(DocumentChange doc : queryDocumentSnapshots.getDocumentChanges()){
@@ -88,16 +94,36 @@ public class TeacherFinder extends AppCompatActivity {
                         }
 
                     }
-                });
+                });*/
 
-
+            db.collection("bilmuh").addSnapshotListener(new EventListener<QuerySnapshot>() {
+                @Override
+                public void onEvent(@Nullable QuerySnapshot queryDocumentSnapshots, @Nullable FirebaseFirestoreException e) {
+                    if(e != null){
+                        Log.d("FirebaseError","" + e.getMessage());
+                    }
+                    for(DocumentChange doc: queryDocumentSnapshots.getDocumentChanges()){
+                        if(doc.getType() == DocumentChange.Type.ADDED){
+                            Teachers teachers = doc.getDocument().toObject(Teachers.class);
+                            teachersList.add(teachers);
+                            teachersListAdapter.notifyDataSetChanged();
+                            String uid = doc.getDocument().getId();
+                            teacherIds.add(uid);
+                        }
+                    }
+                }
+            });
             }
 
         }
         mHocaList.addOnItemTouchListener(new RecyclerItemClickListener(TeacherFinder.this, new RecyclerItemClickListener.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
-                Toast.makeText(TeacherFinder.this, "HEY", Toast.LENGTH_SHORT).show();
+
+                TextView nametext = view.findViewById(R.id.nameText);
+                // TextView uidText = view.findViewById(R.id.statusText);
+                //in order to get userId
+                //Toast.makeText(TeacherFinder.this, teacherIds.get(position), Toast.LENGTH_SHORT).show();
             }
         }));
     }
