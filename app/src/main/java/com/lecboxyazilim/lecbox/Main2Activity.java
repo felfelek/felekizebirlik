@@ -11,7 +11,7 @@ public class Main2Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
-        Intent toTeacherFinder = new Intent(Main2Activity.this,TeacherFinder.class);
+        Intent toTeacherFinder = new Intent(Main2Activity.this,FenEdebiyatActivity.class);
         startActivity(toTeacherFinder);
     }
 }
